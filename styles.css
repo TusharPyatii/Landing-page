@@ -5,6 +5,7 @@
 }
 body{
     height: 100vh;
+    width: 100vw;
 }
 .container{
     height: 100%;
@@ -190,6 +191,9 @@ a{
 }
 @media(max-width:1000px)
 {
+    body{
+        width: 130vw; 
+    }
     .container,.header,.main,.next,.lastpart{
         flex-direction: column;
     }
