@@ -213,8 +213,15 @@ a{
         align-items: center;
         padding-right:180px;
     }
-    .head,.details{
+    .head{
         justify-content:center;
+        padding-right: 60px;
+    }
+    .details{
+        .head{
+            justify-content:center;
+            padding-left:30px;
+        }
     }
     .image{
         align-self: center;
