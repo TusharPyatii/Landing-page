@@ -20,12 +20,11 @@ body{
     color: white;
 }
 .details{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1rem;
+    display: flex;
+    gap: 2rem;
     font-size: 24px;
-    padding-top: 20px;
-    padding-right: 30px;
+    padding-top: 22px;
+    padding-right: 50px;
 }
 .details p{
     padding: 10px;
@@ -33,13 +32,24 @@ body{
     border-radius: 50%;
 }
 .head{
+    display: flex;
     font-size:25px ;
     padding-left: 50px;
+}
+#anchor{
+    text-decoration: none;
 }
 .image img{
     height: 300px;
     width: 400px;
     padding-left: 50px;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+}
+.image1{
+    display: flex;
 }
 .main{
     background-color: white;
@@ -65,12 +75,12 @@ body{
     flex-direction: column;
 }
 .next{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    justify-content: space-evenly;
     padding-left: 200px;
     padding-top: 20px;
-    padding-right: 20px;
-    gap: 1rem;
+    padding-right: 250px;
+    gap: 5rem;
 }
 .had{
     align-self: center;
@@ -93,15 +103,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-column-start: 3;
-    grid-column-end: 4 ;
 }
 .javascript{
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-column-start: 5;
-    grid-column-end: 6;
 }
 #two{
     font-size: 20px;
@@ -119,18 +125,13 @@ body{
     font-size: 35px;
 }
 .part2{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+    display: flex;
 }
 .ten{
-    grid-column-start: 1;
-    grid-column-end: 2;
     padding-left: 60px;
     padding-top: 30px;
 }
 .six{
-    grid-column-start: 3;
-    grid-column-end: 5;
     padding-left: 200px;
     padding-top: 30px;
 }
@@ -169,37 +170,10 @@ button{
     transform: scale(1.1);
     cursor: pointer;
 }
-@media (max-width:768px)
-{.header{
-    flex-direction: column;
-}
-.main{
-    flex-direction: column;
-}
-.next{
-    grid-template-columns: repeat(1 ,1fr);
-    grid-template-rows:repeat(3, 1fr);    
-}
-.dsa{
-    grid-row-start: 0;
-    grid-row-start: 1;
-}
-.html{
-    grid-row-start: 1;
-     grid-row-start: 2;
-}
-.javascript{
-    grid-row-start: 2;
-     grid-row-start: 3;
-}   
-body{
-    width: 100vw;
-}
-}
 a{
     color: antiquewhite;
 }
-a:hover{
+.details a:hover{
     color: black;
     cursor: pointer;
 }
@@ -210,4 +184,45 @@ a:hover{
 }
 .top{
     padding-top: 20px;
+}
+.six{
+    padding-left:600px ;
+}
+@media(max-width:1000px)
+{
+    .container,.header,.main,.next,.lastpart{
+        flex-direction: column;
+    }
+    .part2{
+        flex-direction: column;
+    }
+    .six{
+        padding: 0;
+        padding-left: 150px;
+        padding-top: 20px;
+    }
+    .next{
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .part1{
+        align-self: center;
+        padding-right:180px;
+    }
+    .part2{
+        align-items: center;
+        padding-right:180px;
+    }
+    .head,.details{
+        justify-content:center;
+    }
+    .image{
+        align-self: center;
+    }
+    .image1{
+        justify-content:center ;    
+    }
+    .lastpart{
+        padding-top: 30px;
+    }
 }
